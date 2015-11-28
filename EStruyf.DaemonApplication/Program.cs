@@ -31,7 +31,7 @@ namespace EStruyf.DaemonApplication
                     {
                         // Fetch the latest events
                         var client = new RestClient(GraphUrl);
-                        var request = new RestRequest("/v1.0/users/{UserId or UserPrincipleName}}/Events", Method.GET);
+                        var request = new RestRequest("/v1.0/users/{UserId or UserPrincipleName}/Events", Method.GET);
                         request.AddHeader("Authorization", "Bearer " + token.Result);
                         request.AddHeader("Content-Type", "application/json");
                         request.AddHeader("Accept", "application/json");
